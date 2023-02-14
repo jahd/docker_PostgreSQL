@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    volumes:
+      - ./data/BTC-USD.csv:/BTC-USD.csv
+    ports:
+      - "5432:5432"
